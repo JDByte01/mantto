@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "80f9d1ca-2bc7-4cf5-ace0-6f8edf657f99",
+		"name": "Mantto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Agregar tarjeta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"tipoTarjeta\": \"A\",\n\t\"numTarjeta\": \"encriptada\",\n\t\"fechaVencimiento\": \"2019-02-26\",\n\t\"idPais\": 1,\n\t\"idBanco\": 1,\n\t\"idMoneda\": 1\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/tarjeta/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarjeta",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar tarjeta",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/tarjeta/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tarjeta",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar cliente",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nombres\": \"Holis\",\n\t\"email\": \"hola@mail.com\",\n\t\"telefono\": \"1234-5678\",\n\t\"direccion\": \"hola direccion\"\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/cliente/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cliente",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mostrar servicios no atendidos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/servicio",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"servicio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Agregar o actualizar foto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": ""
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:3000/cliente/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"cliente",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
